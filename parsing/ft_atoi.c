@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	handl_sign(long *sign, char c, int *i)
 {

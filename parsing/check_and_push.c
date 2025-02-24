@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	free_all(t_stack **begin, char **nbr)
 {

@@ -27,7 +27,17 @@ size_t	ft_strlen(const char *c);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 // operations
-
+int                                     sa(t_stack **stack_a);
+int                                     sb(t_stack **stack_b);
+int                                     ss(t_stack **stack_a, t_stack **stack_b);
+int                                     ra(t_stack **stack_a);
+int                                     rb(t_stack **stack_b);
+int                                     rr(t_stack **stack_a, t_stack **stack_b);
+int                                     rra(t_stack **stack_a);
+int                                     rrb(t_stack **stack_b);
+int                                     rrr(t_stack **stack_a, t_stack **stack_b);
+int                                     pa(t_stack **stack_a, t_stack **stack_b);
+int                                     pb(t_stack **stack_a, t_stack **stack_b);
 
 // sort
 
