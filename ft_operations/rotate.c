@@ -6,7 +6,7 @@
 /*   By: mowardan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 09:52:38 by mowardan          #+#    #+#             */
-/*   Updated: 2025/02/24 09:52:43 by mowardan         ###   ########.fr       */
+/*   Updated: 2025/02/25 21:34:48 by mowardan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,33 +36,6 @@ int	ra(t_stack **stack_a)
 	if (rotate(stack_a))
 	{
 		write(1, "ra\n", 3);
-		return (1);
-	}
-	return (0);
-}
-
-int	rb(t_stack **stack_b)
-{
-	if (!stack_b || !(*stack_b) || !(*stack_b)->next)
-		return (0);
-	if (rotate(stack_b))
-	{
-		write(1, "rb\n", 3);
-		return (1);
-	}
-	return (0);
-}
-
-int	rr(t_stack **stack_a, t_stack **stack_b)
-{
-	int	rotated_a;
-	int	rotated_b;
-
-	rotated_a = rotate(stack_a);
-	rotated_b = rotate(stack_b);
-	if (rotated_a || rotated_b)
-	{
-		write(1, "rr\n", 3);
 		return (1);
 	}
 	return (0);

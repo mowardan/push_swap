@@ -25,21 +25,23 @@ void	push_front(t_stack **begin_list, t_stack *new_node);
 t_stack	*create_node(int nb);
 size_t	ft_strlen(const char *c);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
+int stack_size(t_stack *stack);
 
 // operations
 int                                     sa(t_stack **stack_a);
-int                                     sb(t_stack **stack_b);
-int                                     ss(t_stack **stack_a, t_stack **stack_b);
 int                                     ra(t_stack **stack_a);
-int                                     rb(t_stack **stack_b);
-int                                     rr(t_stack **stack_a, t_stack **stack_b);
 int                                     rra(t_stack **stack_a);
-int                                     rrb(t_stack **stack_b);
-int                                     rrr(t_stack **stack_a, t_stack **stack_b);
 int                                     pa(t_stack **stack_a, t_stack **stack_b);
 int                                     pb(t_stack **stack_a, t_stack **stack_b);
 
-// sort
-
+// algo
+int                             is_sorted(t_stack *stack);
+void                            small_sort(t_stack **stack_a, t_stack **stack_b, int size);
+int            	                find_max(t_stack *stack);
+int                             find_min(t_stack *stack);
+int                             find_index(int target, t_stack *stack);
+void                            sort_three(t_stack **stack_a);
+void                            move_min_to_top(t_stack **stack, int distance, int size);
+void	radix_sort(t_stack **stack_a, t_stack **stack_b, int size);
 
 #endif

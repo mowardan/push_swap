@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 
 NAME = push_swap
 
@@ -9,6 +9,7 @@ SRCS =\
       parsing/free.c\
       parsing/ft_atoi.c\
       parsing/ft_split.c\
+      parsing/stack_size.c\
       main.c\
       parsing/push_front.c\
       parsing/ft_substr.c\
@@ -17,7 +18,12 @@ SRCS =\
       ft_operations/push.c\
       ft_operations/swap.c\
       ft_operations/reverse_operations.c\
-
+      algo/move_min_to_top.c \
+      algo/sort_three.c \
+      algo/is_sorted.c \
+      algo/ft_find.c \
+      algo/small_sort.c \
+      algo/radix_sort.c \
 
 OBJS = $(SRCS:.c=.o)
 
