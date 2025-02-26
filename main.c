@@ -28,5 +28,10 @@ int main(int ac, char **av)
         else
             radix_sort(&stack_a, &stack_b, argnum);
     }
+    while(stack_a)
+    {
+	    printf("%d\n", stack_a->nb);
+	    stack_a = stack_a->next;
+    }
     free_stack(&stack_a);
 }

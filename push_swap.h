@@ -11,7 +11,7 @@ typedef struct stack
 	int				nb;
 	int				index;
 	int				rank;
-	struct stack	*next;
+struct stack	*next;
 }					t_stack;
 
 // parsing
