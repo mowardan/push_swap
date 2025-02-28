@@ -60,7 +60,7 @@ static t_stack	*push_stack(t_stack *stack, char **nbr)
 		new_node = create_node(nb);
 		if (!new_node)
 			return (free_all(&stack, nbr), NULL);
-		push_front(&stack, new_node);
+		add_back(&stack, new_node);
 	}
 	if (check_dublicated(stack) == 0)
 		return (free_all(&stack, nbr), NULL);

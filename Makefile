@@ -6,6 +6,8 @@ NAME = push_swap
 SRCS =\
       parsing/check_and_push.c\
       parsing/create_node.c\
+      parsing/addback.c\
+      parsing/addlast.c\
       parsing/free.c\
       parsing/ft_atoi.c\
       parsing/ft_split.c\

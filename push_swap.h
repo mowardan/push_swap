@@ -26,6 +26,8 @@ t_stack	*create_node(int nb);
 size_t	ft_strlen(const char *c);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 int stack_size(t_stack *stack);
+t_stack	*ft_lstlast(t_stack *lst);
+void	add_back(t_stack **lst, t_stack *new);
 
 // operations
 int                                     sa(t_stack **stack_a);
