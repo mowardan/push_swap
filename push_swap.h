@@ -9,7 +9,7 @@
 typedef struct stack
 {
 	int				nb;
-	int				index;
+	//int				index;
 	int				rank;
 struct stack	*next;
 }					t_stack;
@@ -43,5 +43,6 @@ int                             find_index(int target, t_stack *stack);
 void                            sort_three(t_stack **stack_a);
 void                            move_min_to_top(t_stack **stack, int distance, int size);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b, int size);
+void    fill_index(t_stack **stack_a);
 
 #endif

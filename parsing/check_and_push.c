@@ -80,5 +80,6 @@ t_stack	*check_and_push(t_stack *stack, char **nbr)
 	stack = push_stack(stack, nbr);
 	if (stack == NULL)
 		exit(0);
+	fill_index(&stack);
 	return (stack);
 }

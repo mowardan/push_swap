@@ -1,10 +1,10 @@
 #include "push_swap.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
-	t_stack *stack_b;
-	int argnum;
+	t_stack	*stack_b;
+	int		argnum;
 	char	**nbr;
 	int		i;
 
@@ -19,19 +19,18 @@ int main(int ac, char **av)
 		i++;
 	}
 	if (!stack_a)
-            return (-1);
+		return (-1);
 	argnum = stack_size(stack_a);
-    if (!is_sorted(stack_a))
-    {
-        if (argnum <= 20)
-            small_sort(&stack_a, &stack_b, argnum);
-        else
-            radix_sort(&stack_a, &stack_b, argnum);
-    }
-    while(stack_a)
-    {
-	    printf("%d\n", stack_a->nb);
-	    stack_a = stack_a->next;
-    }
-    free_stack(&stack_a);
+	if (!is_sorted(stack_a))
+	{
+		if (argnum <= 20)
+			small_sort(&stack_a, &stack_b, argnum);
+		else
+			radix_sort(&stack_a, &stack_b, argnum);
+	}
+
+	if (is_sorted(stack_a))
+	 	printf("isorted");
+
+	free_stack(&stack_a);
 }
