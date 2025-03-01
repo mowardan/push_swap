@@ -46,5 +46,5 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
-
+.SECONDARY: $(OBJS)
 .PHONY: all clean fclean re

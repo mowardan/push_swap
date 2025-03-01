@@ -35,7 +35,7 @@ int	main(int ac, char **av)
 	if (!is_sorted(stack_a))
 	{
 		if (argnum <= 20)
-		
+
 			small_sort(&stack_a, &stack_b, argnum);
 		else
 			radix_sort(&stack_a, &stack_b, argnum);
@@ -50,6 +50,5 @@ int	main(int ac, char **av)
 	// puts("");
 //	if (is_sorted(stack_a))
 //	 	printf("isorted");
-
 	free_stack(&stack_a);
 }
