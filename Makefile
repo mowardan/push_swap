@@ -1,8 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g3
-
 NAME = push_swap
-
 SRCS =\
       parsing/check_and_push.c\
       parsing/create_node.c\
@@ -13,7 +11,6 @@ SRCS =\
       parsing/ft_split.c\
       parsing/stack_size.c\
       main.c\
-      parsing/push_front.c\
       parsing/ft_substr.c\
       parsing/ft_strlen.c\
       ft_operations/rotate.c\
@@ -28,22 +25,20 @@ SRCS =\
       algo/radix_sort.c \
 
 OBJS = $(SRCS:.c=.o)
-
 INCLUDES = push_swap.h
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c $(INCLUDES)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 .SECONDARY: $(OBJS)

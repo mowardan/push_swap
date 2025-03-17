@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   radix_sort.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mowardan <mowardan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/17 21:43:25 by mowardan          #+#    #+#             */
+/*   Updated: 2025/03/17 22:31:50 by mowardan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 static int	get_max_bits(t_stack **stack)
@@ -11,14 +23,10 @@ static int	get_max_bits(t_stack **stack)
 	max_bits = 0;
 	while (head)
 	{
-//		printf("%d\n", head->index);
 		if (head->rank > max)
 			max = head->rank;
 		head = head->next;
-	///	printf("-->%d\n", max);
-	///	printf("here\n");
 	}
-//	printf("%d", max);
 	while ((max >> max_bits) != 0)
 		max_bits++;
 	return (max_bits);
@@ -26,8 +34,8 @@ static int	get_max_bits(t_stack **stack)
 
 void	fill_index(t_stack **stack_a)
 {
-	t_stack *current;
-	t_stack *tmp;
+	t_stack	*current;
+	t_stack	*tmp;
 	int		rank;
 
 	current = *stack_a;
@@ -61,19 +69,16 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b, int size)
 
 	i = 0;
 	max_bits = get_max_bits(stack_a);
-	// printf("%d", max_bits);
 	while (i < max_bits)
 	{
 		j = 0;
 		while (j < size)
 		{
-			//printf("%c", 'B');
 			head_a = *stack_a;
 			if (((head_a->rank >> i) & 1) == 0)
 				pb(stack_a, stack_b);
 			else
 				ra(stack_a);
-			//printf("%c", 'A');
 			j++;
 		}
 		while (*stack_b)

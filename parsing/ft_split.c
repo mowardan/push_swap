@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mowardan <mowardan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/17 22:15:30 by mowardan          #+#    #+#             */
+/*   Updated: 2025/03/17 22:16:28 by mowardan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 static size_t	count_words(const char *s, char c)
@@ -32,7 +44,7 @@ static void	ft_free(char **str)
 	free(str);
 }
 
-static char	**one_more_line(char const*s, char c, char **str, size_t count)
+static char	**one_more_line(char const *s, char c, char **str, size_t count)
 {
 	size_t	start;
 	size_t	end;
@@ -65,11 +77,11 @@ char	**ft_split(char const *s, char c)
 	char	**new_str;
 	size_t	count;
 
-	if(s == NULL)
+	if (s == NULL)
 		return (NULL);
 	count = count_words(s, c);
 	new_str = malloc((count + 1) * sizeof(char *));
-	if (new_str == NULL )
+	if (new_str == NULL)
 		return (NULL);
 	if (one_more_line(s, c, new_str, count) == NULL)
 		return (NULL);
