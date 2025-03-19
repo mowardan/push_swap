@@ -6,7 +6,7 @@
 /*   By: mowardan <mowardan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 22:14:50 by mowardan          #+#    #+#             */
-/*   Updated: 2025/03/17 22:16:28 by mowardan         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:04:00 by mowardan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static t_stack	*push_stack(t_stack *stack, char **nbr)
 	while (nbr[i])
 	{
 		nb = ft_atoi(nbr[i++], &flag);
-		if (flag == 0 || nb < INT_MIN || nb > INT_MAX)
+		if (flag == 0)
 			return (free_all(&stack, nbr), write(2, "Error\n", 6), NULL);
 		new_node = create_node(nb);
 		if (!new_node)
@@ -85,13 +85,13 @@ t_stack	*check_and_push(t_stack *stack, char **nbr)
 	{
 		if (nbr && !*nbr)
 			free_nbr(nbr);
-		free_stack(&stack);
-		write(2, "Error\n", 6);
-		exit(0);
+		if (stack)
+			free_stack(&stack);
+		exit(1);
 	}
 	stack = push_stack(stack, nbr);
 	if (stack == NULL)
-		exit(0);
+		exit(1);
 	fill_index(&stack);
 	return (stack);
 }
