@@ -6,7 +6,7 @@
 /*   By: mowardan <mowardan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 22:14:59 by mowardan          #+#    #+#             */
-/*   Updated: 2025/03/17 22:16:28 by mowardan         ###   ########.fr       */
+/*   Updated: 2025/03/20 01:32:11 by mowardan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ t_stack	*create_node(int nb)
 	if (!node)
 		return (NULL);
 	node->nb = nb;
-	node->rank = -1;
 	node->next = NULL;
 	return (node);
 }
