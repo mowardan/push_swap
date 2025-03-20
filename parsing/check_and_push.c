@@ -6,7 +6,7 @@
 /*   By: mowardan <mowardan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 22:14:50 by mowardan          #+#    #+#             */
-/*   Updated: 2025/03/19 15:04:00 by mowardan         ###   ########.fr       */
+/*   Updated: 2025/03/20 01:09:57 by mowardan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ t_stack	*check_and_push(t_stack *stack, char **nbr)
 	{
 		if (nbr && !*nbr)
 			free_nbr(nbr);
+		write(2, "Error\n", 6);
 		if (stack)
 			free_stack(&stack);
 		exit(1);
